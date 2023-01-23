@@ -27,7 +27,7 @@ class NeuralNetwork():
     # We train the neural network through a process of trial and error.
     # Adjusting the synaptic weights each time.
     def train(self, training_set_inputs, training_set_outputs, number_of_training_iterations):
-        for iteration in xrange(number_of_training_iterations):
+        for iteration in range(number_of_training_iterations):
             # Pass the training set through our neural network (a single neuron).
             output = self.think(training_set_inputs)
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     # Train the neural network using a training set.
     # Do it 10,000 times and make small adjustments each time.
-    neural_network.train(training_set_inputs, 10000, training_set_outputs, 10000)
+    neural_network.train(training_set_inputs, training_set_outputs, 10000)
 
     print ("New synaptic weights after training: ")
     print (neural_network.synaptic_weights)
